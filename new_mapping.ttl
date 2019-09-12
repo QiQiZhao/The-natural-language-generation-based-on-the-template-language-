@@ -1,0 +1,1986 @@
+@prefix map: <#> .
+@prefix db: <> .
+@prefix vocab: <vocab/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix jdbc: <http://d2rq.org/terms/jdbc/> .
+@prefix : <http://www.new.com#> .
+
+map:database a d2rq:Database;
+	d2rq:jdbcDriver "com.mysql.jdbc.Driver";
+	d2rq:jdbcDSN "jdbc:mysql:///new?characterEncoding=utf8";
+	d2rq:username "root";
+	d2rq:password "000000";
+	jdbc:autoReconnect "true";
+	jdbc:zeroDateTimeBehavior "convertToNull";
+	.
+
+# Table datatable
+map:datatable a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "datatable/@@datatable.ID@@";
+	d2rq:class vocab:datatable;
+	d2rq:classDefinitionLabel "datatable";
+	.
+map:datatable_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ID;
+	d2rq:propertyDefinitionLabel "datatable ID";
+	d2rq:column "datatable.ID";
+	d2rq:datatype xsd:integer;
+	.
+map:datatable_Institution a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :Institution;
+	d2rq:propertyDefinitionLabel "datatable Institution";
+	d2rq:column "datatable.Institution";
+	.
+map:datatable_Ranking1 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :Ranking1;
+	d2rq:propertyDefinitionLabel "datatable Ranking1";
+	d2rq:column "datatable.Ranking1";
+	d2rq:datatype xsd:integer;
+	.
+map:datatable_Ranking2 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :Ranking2;
+	d2rq:propertyDefinitionLabel "datatable Ranking2";
+	d2rq:column "datatable.Ranking2";
+	d2rq:datatype xsd:integer;
+	.
+map:datatable_Ranking3 a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :Ranking3;
+	d2rq:propertyDefinitionLabel "datatable Ranking3";
+	d2rq:column "datatable.Ranking3";
+	d2rq:datatype xsd:integer;
+	.
+map:datatable_TS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :TS;
+	d2rq:propertyDefinitionLabel "datatable TS";
+	d2rq:column "datatable.TS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SaT;
+	d2rq:propertyDefinitionLabel "datatable SaT";
+	d2rq:column "datatable.SaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SaC;
+	d2rq:propertyDefinitionLabel "datatable SaC";
+	d2rq:column "datatable.SaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_Expenditure a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :Expenditure;
+	d2rq:propertyDefinitionLabel "datatable Expenditure";
+	d2rq:column "datatable.Expenditure";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SSR a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SSR;
+	d2rq:propertyDefinitionLabel "datatable SSR";
+	d2rq:column "datatable.SSR";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_CP a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :CP;
+	d2rq:propertyDefinitionLabel "datatable CP";
+	d2rq:column "datatable.CP";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_Continuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :Continuation;
+	d2rq:propertyDefinitionLabel "datatable Continuation";
+	d2rq:column "datatable.Continuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_VAS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :VAS;
+	d2rq:propertyDefinitionLabel "datatable VAS";
+	d2rq:column "datatable.VAS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ET a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ET;
+	d2rq:propertyDefinitionLabel "datatable ET";
+	d2rq:column "datatable.ET";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SaF a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SaF;
+	d2rq:propertyDefinitionLabel "datatable SaF";
+	d2rq:column "datatable.SaF";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AccountingFinanceRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AccountingFinanceRank;
+	d2rq:propertyDefinitionLabel "datatable AccountingFinanceRank";
+	d2rq:column "datatable.AccountingFinanceRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AccountingFinanceGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AccountingFinanceGS;
+	d2rq:propertyDefinitionLabel "datatable AccountingFinanceGS";
+	d2rq:column "datatable.AccountingFinanceGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AccountingFinanceSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AccountingFinanceSaT;
+	d2rq:propertyDefinitionLabel "datatable AccountingFinanceSaT";
+	d2rq:column "datatable.AccountingFinanceSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AccountingFinanceSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AccountingFinanceSaC;
+	d2rq:propertyDefinitionLabel "datatable AccountingFinanceSaC";
+	d2rq:column "datatable.AccountingFinanceSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AccountingFinanceContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AccountingFinanceContinuation;
+	d2rq:propertyDefinitionLabel "datatable AccountingFinanceContinuation";
+	d2rq:column "datatable.AccountingFinanceContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AgricultureForestryFoodRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AgricultureForestryFoodRank;
+	d2rq:propertyDefinitionLabel "datatable AgricultureForestryFoodRank";
+	d2rq:column "datatable.AgricultureForestryFoodRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AgricultureForestryFoodGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AgricultureForestryFoodGS;
+	d2rq:propertyDefinitionLabel "datatable AgricultureForestryFoodGS";
+	d2rq:column "datatable.AgricultureForestryFoodGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AgricultureForestryFoodSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AgricultureForestryFoodSaT;
+	d2rq:propertyDefinitionLabel "datatable AgricultureForestryFoodSaT";
+	d2rq:column "datatable.AgricultureForestryFoodSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AgricultureForestryFoodSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AgricultureForestryFoodSaC;
+	d2rq:propertyDefinitionLabel "datatable AgricultureForestryFoodSaC";
+	d2rq:column "datatable.AgricultureForestryFoodSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AgricultureForestryFoodContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AgricultureForestryFoodContinuation;
+	d2rq:propertyDefinitionLabel "datatable AgricultureForestryFoodContinuation";
+	d2rq:column "datatable.AgricultureForestryFoodContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AmericanStudiesRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AmericanStudiesRank;
+	d2rq:propertyDefinitionLabel "datatable AmericanStudiesRank";
+	d2rq:column "datatable.AmericanStudiesRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AmericanStudiesGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AmericanStudiesGS;
+	d2rq:propertyDefinitionLabel "datatable AmericanStudiesGS";
+	d2rq:column "datatable.AmericanStudiesGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AmericanStudiesSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AmericanStudiesSaT;
+	d2rq:propertyDefinitionLabel "datatable AmericanStudiesSaT";
+	d2rq:column "datatable.AmericanStudiesSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AmericanStudiesSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AmericanStudiesSaC;
+	d2rq:propertyDefinitionLabel "datatable AmericanStudiesSaC";
+	d2rq:column "datatable.AmericanStudiesSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AmericanStudiesContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AmericanStudiesContinuation;
+	d2rq:propertyDefinitionLabel "datatable AmericanStudiesContinuation";
+	d2rq:column "datatable.AmericanStudiesContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AnatomyPhysiologyRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AnatomyPhysiologyRank;
+	d2rq:propertyDefinitionLabel "datatable AnatomyPhysiologyRank";
+	d2rq:column "datatable.AnatomyPhysiologyRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AnatomyPhysiologyGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AnatomyPhysiologyGS;
+	d2rq:propertyDefinitionLabel "datatable AnatomyPhysiologyGS";
+	d2rq:column "datatable.AnatomyPhysiologyGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AnatomyPhysiologySaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AnatomyPhysiologySaT;
+	d2rq:propertyDefinitionLabel "datatable AnatomyPhysiologySaT";
+	d2rq:column "datatable.AnatomyPhysiologySaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AnatomyPhysiologySaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AnatomyPhysiologySaC;
+	d2rq:propertyDefinitionLabel "datatable AnatomyPhysiologySaC";
+	d2rq:column "datatable.AnatomyPhysiologySaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AnatomyPhysiologyContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AnatomyPhysiologyContinuation;
+	d2rq:propertyDefinitionLabel "datatable AnatomyPhysiologyContinuation";
+	d2rq:column "datatable.AnatomyPhysiologyContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AnthropologyRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AnthropologyRank;
+	d2rq:propertyDefinitionLabel "datatable AnthropologyRank";
+	d2rq:column "datatable.AnthropologyRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AnthropologyGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AnthropologyGS;
+	d2rq:propertyDefinitionLabel "datatable AnthropologyGS";
+	d2rq:column "datatable.AnthropologyGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AnthropologySaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AnthropologySaT;
+	d2rq:propertyDefinitionLabel "datatable AnthropologySaT";
+	d2rq:column "datatable.AnthropologySaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AnthropologySaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AnthropologySaC;
+	d2rq:propertyDefinitionLabel "datatable AnthropologySaC";
+	d2rq:column "datatable.AnthropologySaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_AnthropologyContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :AnthropologyContinuation;
+	d2rq:propertyDefinitionLabel "datatable AnthropologyContinuation";
+	d2rq:column "datatable.AnthropologyContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ArchitectureRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ArchitectureRank;
+	d2rq:propertyDefinitionLabel "datatable ArchitectureRank";
+	d2rq:column "datatable.ArchitectureRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ArchitectureGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ArchitectureGS;
+	d2rq:propertyDefinitionLabel "datatable ArchitectureGS";
+	d2rq:column "datatable.ArchitectureGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ArchitectureSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ArchitectureSaT;
+	d2rq:propertyDefinitionLabel "datatable ArchitectureSaT";
+	d2rq:column "datatable.ArchitectureSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ArchitectureSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ArchitectureSaC;
+	d2rq:propertyDefinitionLabel "datatable ArchitectureSaC";
+	d2rq:column "datatable.ArchitectureSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ArchitectureContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ArchitectureContinuation;
+	d2rq:propertyDefinitionLabel "datatable ArchitectureContinuation";
+	d2rq:column "datatable.ArchitectureContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ArtRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ArtRank;
+	d2rq:propertyDefinitionLabel "datatable ArtRank";
+	d2rq:column "datatable.ArtRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ArtGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ArtGS;
+	d2rq:propertyDefinitionLabel "datatable ArtGS";
+	d2rq:column "datatable.ArtGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ArtSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ArtSaT;
+	d2rq:propertyDefinitionLabel "datatable ArtSaT";
+	d2rq:column "datatable.ArtSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ArtSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ArtSaC;
+	d2rq:propertyDefinitionLabel "datatable ArtSaC";
+	d2rq:column "datatable.ArtSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ArtContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ArtContinuation;
+	d2rq:propertyDefinitionLabel "datatable ArtContinuation";
+	d2rq:column "datatable.ArtContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_BiosciencesRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :BiosciencesRank;
+	d2rq:propertyDefinitionLabel "datatable BiosciencesRank";
+	d2rq:column "datatable.BiosciencesRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_BiosciencesGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :BiosciencesGS;
+	d2rq:propertyDefinitionLabel "datatable BiosciencesGS";
+	d2rq:column "datatable.BiosciencesGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_BiosciencesSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :BiosciencesSaT;
+	d2rq:propertyDefinitionLabel "datatable BiosciencesSaT";
+	d2rq:column "datatable.BiosciencesSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_BiosciencesSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :BiosciencesSaC;
+	d2rq:propertyDefinitionLabel "datatable BiosciencesSaC";
+	d2rq:column "datatable.BiosciencesSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_BiosciencesContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :BiosciencesContinuation;
+	d2rq:propertyDefinitionLabel "datatable BiosciencesContinuation";
+	d2rq:column "datatable.BiosciencesContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_BuildingandtownandcountryplanningRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :BuildingandtownandcountryplanningRank;
+	d2rq:propertyDefinitionLabel "datatable BuildingandtownandcountryplanningRank";
+	d2rq:column "datatable.BuildingandtownandcountryplanningRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_BuildingandtownandcountryplanningGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :BuildingandtownandcountryplanningGS;
+	d2rq:propertyDefinitionLabel "datatable BuildingandtownandcountryplanningGS";
+	d2rq:column "datatable.BuildingandtownandcountryplanningGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_BuildingandtownandcountryplanningSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :BuildingandtownandcountryplanningSaT;
+	d2rq:propertyDefinitionLabel "datatable BuildingandtownandcountryplanningSaT";
+	d2rq:column "datatable.BuildingandtownandcountryplanningSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_BuildingandtownandcountryplanningSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :BuildingandtownandcountryplanningSaC;
+	d2rq:propertyDefinitionLabel "datatable BuildingandtownandcountryplanningSaC";
+	d2rq:column "datatable.BuildingandtownandcountryplanningSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_BuildingandtownandcountryplanningContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :BuildingandtownandcountryplanningContinuation;
+	d2rq:propertyDefinitionLabel "datatable BuildingandtownandcountryplanningContinuation";
+	d2rq:column "datatable.BuildingandtownandcountryplanningContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_BusinessManagementMarketingRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :BusinessManagementMarketingRank;
+	d2rq:propertyDefinitionLabel "datatable BusinessManagementMarketingRank";
+	d2rq:column "datatable.BusinessManagementMarketingRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_BusinessManagementMarketingGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :BusinessManagementMarketingGS;
+	d2rq:propertyDefinitionLabel "datatable BusinessManagementMarketingGS";
+	d2rq:column "datatable.BusinessManagementMarketingGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_BusinessManagementMarketingSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :BusinessManagementMarketingSaT;
+	d2rq:propertyDefinitionLabel "datatable BusinessManagementMarketingSaT";
+	d2rq:column "datatable.BusinessManagementMarketingSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_BusinessManagementMarketingSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :BusinessManagementMarketingSaC;
+	d2rq:propertyDefinitionLabel "datatable BusinessManagementMarketingSaC";
+	d2rq:column "datatable.BusinessManagementMarketingSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_BusinessManagementMarketingContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :BusinessManagementMarketingContinuation;
+	d2rq:propertyDefinitionLabel "datatable BusinessManagementMarketingContinuation";
+	d2rq:column "datatable.BusinessManagementMarketingContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ChemistryRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ChemistryRank;
+	d2rq:propertyDefinitionLabel "datatable ChemistryRank";
+	d2rq:column "datatable.ChemistryRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ChemistryGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ChemistryGS;
+	d2rq:propertyDefinitionLabel "datatable ChemistryGS";
+	d2rq:column "datatable.ChemistryGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ChemistrySaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ChemistrySaT;
+	d2rq:propertyDefinitionLabel "datatable ChemistrySaT";
+	d2rq:column "datatable.ChemistrySaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ChemistrySaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ChemistrySaC;
+	d2rq:propertyDefinitionLabel "datatable ChemistrySaC";
+	d2rq:column "datatable.ChemistrySaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ChemistryContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ChemistryContinuation;
+	d2rq:propertyDefinitionLabel "datatable ChemistryContinuation";
+	d2rq:column "datatable.ChemistryContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ClassicsAncientHistoryRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ClassicsAncientHistoryRank;
+	d2rq:propertyDefinitionLabel "datatable ClassicsAncientHistoryRank";
+	d2rq:column "datatable.ClassicsAncientHistoryRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ClassicsAncientHistoryGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ClassicsAncientHistoryGS;
+	d2rq:propertyDefinitionLabel "datatable ClassicsAncientHistoryGS";
+	d2rq:column "datatable.ClassicsAncientHistoryGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ClassicsAncientHistorySaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ClassicsAncientHistorySaT;
+	d2rq:propertyDefinitionLabel "datatable ClassicsAncientHistorySaT";
+	d2rq:column "datatable.ClassicsAncientHistorySaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ClassicsAncientHistorySaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ClassicsAncientHistorySaC;
+	d2rq:propertyDefinitionLabel "datatable ClassicsAncientHistorySaC";
+	d2rq:column "datatable.ClassicsAncientHistorySaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ClassicsAncientHistoryContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ClassicsAncientHistoryContinuation;
+	d2rq:propertyDefinitionLabel "datatable ClassicsAncientHistoryContinuation";
+	d2rq:column "datatable.ClassicsAncientHistoryContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ComputerScienceInformationSystemsRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ComputerScienceInformationSystemsRank;
+	d2rq:propertyDefinitionLabel "datatable ComputerScienceInformationSystemsRank";
+	d2rq:column "datatable.ComputerScienceInformationSystemsRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ComputerScienceInformationSystemsGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ComputerScienceInformationSystemsGS;
+	d2rq:propertyDefinitionLabel "datatable ComputerScienceInformationSystemsGS";
+	d2rq:column "datatable.ComputerScienceInformationSystemsGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ComputerScienceInformationSystemsSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ComputerScienceInformationSystemsSaT;
+	d2rq:propertyDefinitionLabel "datatable ComputerScienceInformationSystemsSaT";
+	d2rq:column "datatable.ComputerScienceInformationSystemsSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ComputerScienceInformationSystemsSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ComputerScienceInformationSystemsSaC;
+	d2rq:propertyDefinitionLabel "datatable ComputerScienceInformationSystemsSaC";
+	d2rq:column "datatable.ComputerScienceInformationSystemsSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ComputerScienceInformationSystemsContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ComputerScienceInformationSystemsContinuation;
+	d2rq:propertyDefinitionLabel "datatable ComputerScienceInformationSystemsContinuation";
+	d2rq:column "datatable.ComputerScienceInformationSystemsContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_CriminologyRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :CriminologyRank;
+	d2rq:propertyDefinitionLabel "datatable CriminologyRank";
+	d2rq:column "datatable.CriminologyRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_CriminologyGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :CriminologyGS;
+	d2rq:propertyDefinitionLabel "datatable CriminologyGS";
+	d2rq:column "datatable.CriminologyGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_CriminologySaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :CriminologySaT;
+	d2rq:propertyDefinitionLabel "datatable CriminologySaT";
+	d2rq:column "datatable.CriminologySaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_CriminologySaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :CriminologySaC;
+	d2rq:propertyDefinitionLabel "datatable CriminologySaC";
+	d2rq:column "datatable.CriminologySaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_CriminologyContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :CriminologyContinuation;
+	d2rq:propertyDefinitionLabel "datatable CriminologyContinuation";
+	d2rq:column "datatable.CriminologyContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_DentisitryRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :DentisitryRank;
+	d2rq:propertyDefinitionLabel "datatable DentisitryRank";
+	d2rq:column "datatable.DentisitryRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_DentisitryGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :DentisitryGS;
+	d2rq:propertyDefinitionLabel "datatable DentisitryGS";
+	d2rq:column "datatable.DentisitryGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_DentisitrySaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :DentisitrySaT;
+	d2rq:propertyDefinitionLabel "datatable DentisitrySaT";
+	d2rq:column "datatable.DentisitrySaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_DentisitrySaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :DentisitrySaC;
+	d2rq:propertyDefinitionLabel "datatable DentisitrySaC";
+	d2rq:column "datatable.DentisitrySaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_DentisitryContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :DentisitryContinuation;
+	d2rq:propertyDefinitionLabel "datatable DentisitryContinuation";
+	d2rq:column "datatable.DentisitryContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_DesignCraftsRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :DesignCraftsRank;
+	d2rq:propertyDefinitionLabel "datatable DesignCraftsRank";
+	d2rq:column "datatable.DesignCraftsRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_DesignCraftsGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :DesignCraftsGS;
+	d2rq:propertyDefinitionLabel "datatable DesignCraftsGS";
+	d2rq:column "datatable.DesignCraftsGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_DesignCraftsSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :DesignCraftsSaT;
+	d2rq:propertyDefinitionLabel "datatable DesignCraftsSaT";
+	d2rq:column "datatable.DesignCraftsSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_DesignCraftsSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :DesignCraftsSaC;
+	d2rq:propertyDefinitionLabel "datatable DesignCraftsSaC";
+	d2rq:column "datatable.DesignCraftsSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_DesignCraftsContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :DesignCraftsContinuation;
+	d2rq:propertyDefinitionLabel "datatable DesignCraftsContinuation";
+	d2rq:column "datatable.DesignCraftsContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_DramaDanceRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :DramaDanceRank;
+	d2rq:propertyDefinitionLabel "datatable DramaDanceRank";
+	d2rq:column "datatable.DramaDanceRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_DramaDanceGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :DramaDanceGS;
+	d2rq:propertyDefinitionLabel "datatable DramaDanceGS";
+	d2rq:column "datatable.DramaDanceGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_DramaDanceSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :DramaDanceSaT;
+	d2rq:propertyDefinitionLabel "datatable DramaDanceSaT";
+	d2rq:column "datatable.DramaDanceSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_DramaDanceSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :DramaDanceSaC;
+	d2rq:propertyDefinitionLabel "datatable DramaDanceSaC";
+	d2rq:column "datatable.DramaDanceSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_DramaDanceContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :DramaDanceContinuation;
+	d2rq:propertyDefinitionLabel "datatable DramaDanceContinuation";
+	d2rq:column "datatable.DramaDanceContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EarthMarineSciencesRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EarthMarineSciencesRank;
+	d2rq:propertyDefinitionLabel "datatable EarthMarineSciencesRank";
+	d2rq:column "datatable.EarthMarineSciencesRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EarthMarineSciencesGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EarthMarineSciencesGS;
+	d2rq:propertyDefinitionLabel "datatable EarthMarineSciencesGS";
+	d2rq:column "datatable.EarthMarineSciencesGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EarthMarineSciencesSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EarthMarineSciencesSaT;
+	d2rq:propertyDefinitionLabel "datatable EarthMarineSciencesSaT";
+	d2rq:column "datatable.EarthMarineSciencesSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EarthMarineSciencesSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EarthMarineSciencesSaC;
+	d2rq:propertyDefinitionLabel "datatable EarthMarineSciencesSaC";
+	d2rq:column "datatable.EarthMarineSciencesSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EarthMarineSciencesContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EarthMarineSciencesContinuation;
+	d2rq:propertyDefinitionLabel "datatable EarthMarineSciencesContinuation";
+	d2rq:column "datatable.EarthMarineSciencesContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EconomicsRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EconomicsRank;
+	d2rq:propertyDefinitionLabel "datatable EconomicsRank";
+	d2rq:column "datatable.EconomicsRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EconomicsGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EconomicsGS;
+	d2rq:propertyDefinitionLabel "datatable EconomicsGS";
+	d2rq:column "datatable.EconomicsGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EconomicsSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EconomicsSaT;
+	d2rq:propertyDefinitionLabel "datatable EconomicsSaT";
+	d2rq:column "datatable.EconomicsSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EconomicsSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EconomicsSaC;
+	d2rq:propertyDefinitionLabel "datatable EconomicsSaC";
+	d2rq:column "datatable.EconomicsSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EconomicsContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EconomicsContinuation;
+	d2rq:propertyDefinitionLabel "datatable EconomicsContinuation";
+	d2rq:column "datatable.EconomicsContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EducationRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EducationRank;
+	d2rq:propertyDefinitionLabel "datatable EducationRank";
+	d2rq:column "datatable.EducationRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EducationGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EducationGS;
+	d2rq:propertyDefinitionLabel "datatable EducationGS";
+	d2rq:column "datatable.EducationGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EducationSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EducationSaT;
+	d2rq:propertyDefinitionLabel "datatable EducationSaT";
+	d2rq:column "datatable.EducationSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EducationSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EducationSaC;
+	d2rq:propertyDefinitionLabel "datatable EducationSaC";
+	d2rq:column "datatable.EducationSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EducationContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EducationContinuation;
+	d2rq:propertyDefinitionLabel "datatable EducationContinuation";
+	d2rq:column "datatable.EducationContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringChemicalRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringChemicalRank;
+	d2rq:propertyDefinitionLabel "datatable EngineeringChemicalRank";
+	d2rq:column "datatable.EngineeringChemicalRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringChemicalGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringChemicalGS;
+	d2rq:propertyDefinitionLabel "datatable EngineeringChemicalGS";
+	d2rq:column "datatable.EngineeringChemicalGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringChemicalSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringChemicalSaT;
+	d2rq:propertyDefinitionLabel "datatable EngineeringChemicalSaT";
+	d2rq:column "datatable.EngineeringChemicalSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringChemicalSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringChemicalSaC;
+	d2rq:propertyDefinitionLabel "datatable EngineeringChemicalSaC";
+	d2rq:column "datatable.EngineeringChemicalSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringChemicalContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringChemicalContinuation;
+	d2rq:propertyDefinitionLabel "datatable EngineeringChemicalContinuation";
+	d2rq:column "datatable.EngineeringChemicalContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringCivilRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringCivilRank;
+	d2rq:propertyDefinitionLabel "datatable EngineeringCivilRank";
+	d2rq:column "datatable.EngineeringCivilRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringCivilGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringCivilGS;
+	d2rq:propertyDefinitionLabel "datatable EngineeringCivilGS";
+	d2rq:column "datatable.EngineeringCivilGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringCivilSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringCivilSaT;
+	d2rq:propertyDefinitionLabel "datatable EngineeringCivilSaT";
+	d2rq:column "datatable.EngineeringCivilSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringCivilSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringCivilSaC;
+	d2rq:propertyDefinitionLabel "datatable EngineeringCivilSaC";
+	d2rq:column "datatable.EngineeringCivilSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringCivilContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringCivilContinuation;
+	d2rq:propertyDefinitionLabel "datatable EngineeringCivilContinuation";
+	d2rq:column "datatable.EngineeringCivilContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringElectronicElectricalRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringElectronicElectricalRank;
+	d2rq:propertyDefinitionLabel "datatable EngineeringElectronicElectricalRank";
+	d2rq:column "datatable.EngineeringElectronicElectricalRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringElectronicElectricalGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringElectronicElectricalGS;
+	d2rq:propertyDefinitionLabel "datatable EngineeringElectronicElectricalGS";
+	d2rq:column "datatable.EngineeringElectronicElectricalGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringElectronicElectricalSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringElectronicElectricalSaT;
+	d2rq:propertyDefinitionLabel "datatable EngineeringElectronicElectricalSaT";
+	d2rq:column "datatable.EngineeringElectronicElectricalSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringElectronicElectricalSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringElectronicElectricalSaC;
+	d2rq:propertyDefinitionLabel "datatable EngineeringElectronicElectricalSaC";
+	d2rq:column "datatable.EngineeringElectronicElectricalSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringElectronicElectricalContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringElectronicElectricalContinuation;
+	d2rq:propertyDefinitionLabel "datatable EngineeringElectronicElectricalContinuation";
+	d2rq:column "datatable.EngineeringElectronicElectricalContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringGeneralRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringGeneralRank;
+	d2rq:propertyDefinitionLabel "datatable EngineeringGeneralRank";
+	d2rq:column "datatable.EngineeringGeneralRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringGeneralGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringGeneralGS;
+	d2rq:propertyDefinitionLabel "datatable EngineeringGeneralGS";
+	d2rq:column "datatable.EngineeringGeneralGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringGeneralSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringGeneralSaT;
+	d2rq:propertyDefinitionLabel "datatable EngineeringGeneralSaT";
+	d2rq:column "datatable.EngineeringGeneralSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringGeneralSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringGeneralSaC;
+	d2rq:propertyDefinitionLabel "datatable EngineeringGeneralSaC";
+	d2rq:column "datatable.EngineeringGeneralSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringGeneralContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringGeneralContinuation;
+	d2rq:propertyDefinitionLabel "datatable EngineeringGeneralContinuation";
+	d2rq:column "datatable.EngineeringGeneralContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringMaterialsMineralRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringMaterialsMineralRank;
+	d2rq:propertyDefinitionLabel "datatable EngineeringMaterialsMineralRank";
+	d2rq:column "datatable.EngineeringMaterialsMineralRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringMaterialsMineralGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringMaterialsMineralGS;
+	d2rq:propertyDefinitionLabel "datatable EngineeringMaterialsMineralGS";
+	d2rq:column "datatable.EngineeringMaterialsMineralGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringMaterialsMineralSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringMaterialsMineralSaT;
+	d2rq:propertyDefinitionLabel "datatable EngineeringMaterialsMineralSaT";
+	d2rq:column "datatable.EngineeringMaterialsMineralSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringMaterialsMineralSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringMaterialsMineralSaC;
+	d2rq:propertyDefinitionLabel "datatable EngineeringMaterialsMineralSaC";
+	d2rq:column "datatable.EngineeringMaterialsMineralSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringMaterialsMineralContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringMaterialsMineralContinuation;
+	d2rq:propertyDefinitionLabel "datatable EngineeringMaterialsMineralContinuation";
+	d2rq:column "datatable.EngineeringMaterialsMineralContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringMechanicalRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringMechanicalRank;
+	d2rq:propertyDefinitionLabel "datatable EngineeringMechanicalRank";
+	d2rq:column "datatable.EngineeringMechanicalRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringMechanicalGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringMechanicalGS;
+	d2rq:propertyDefinitionLabel "datatable EngineeringMechanicalGS";
+	d2rq:column "datatable.EngineeringMechanicalGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringMechanicalSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringMechanicalSaT;
+	d2rq:propertyDefinitionLabel "datatable EngineeringMechanicalSaT";
+	d2rq:column "datatable.EngineeringMechanicalSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringMechanicalSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringMechanicalSaC;
+	d2rq:propertyDefinitionLabel "datatable EngineeringMechanicalSaC";
+	d2rq:column "datatable.EngineeringMechanicalSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EngineeringMechanicalContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EngineeringMechanicalContinuation;
+	d2rq:propertyDefinitionLabel "datatable EngineeringMechanicalContinuation";
+	d2rq:column "datatable.EngineeringMechanicalContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EnglishCreativeWritingRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EnglishCreativeWritingRank;
+	d2rq:propertyDefinitionLabel "datatable EnglishCreativeWritingRank";
+	d2rq:column "datatable.EnglishCreativeWritingRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EnglishCreativeWritingGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EnglishCreativeWritingGS;
+	d2rq:propertyDefinitionLabel "datatable EnglishCreativeWritingGS";
+	d2rq:column "datatable.EnglishCreativeWritingGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EnglishCreativeWritingSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EnglishCreativeWritingSaT;
+	d2rq:propertyDefinitionLabel "datatable EnglishCreativeWritingSaT";
+	d2rq:column "datatable.EnglishCreativeWritingSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EnglishCreativeWritingSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EnglishCreativeWritingSaC;
+	d2rq:propertyDefinitionLabel "datatable EnglishCreativeWritingSaC";
+	d2rq:column "datatable.EnglishCreativeWritingSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_EnglishCreativeWritingContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :EnglishCreativeWritingContinuation;
+	d2rq:propertyDefinitionLabel "datatable EnglishCreativeWritingContinuation";
+	d2rq:column "datatable.EnglishCreativeWritingContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_FashionTextilesRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :FashionTextilesRank;
+	d2rq:propertyDefinitionLabel "datatable FashionTextilesRank";
+	d2rq:column "datatable.FashionTextilesRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_FashionTextilesGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :FashionTextilesGS;
+	d2rq:propertyDefinitionLabel "datatable FashionTextilesGS";
+	d2rq:column "datatable.FashionTextilesGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_FashionTextilesSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :FashionTextilesSaT;
+	d2rq:propertyDefinitionLabel "datatable FashionTextilesSaT";
+	d2rq:column "datatable.FashionTextilesSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_FashionTextilesSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :FashionTextilesSaC;
+	d2rq:propertyDefinitionLabel "datatable FashionTextilesSaC";
+	d2rq:column "datatable.FashionTextilesSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_FashionTextilesContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :FashionTextilesContinuation;
+	d2rq:propertyDefinitionLabel "datatable FashionTextilesContinuation";
+	d2rq:column "datatable.FashionTextilesContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_FilmProductionPhotographyRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :FilmProductionPhotographyRank;
+	d2rq:propertyDefinitionLabel "datatable FilmProductionPhotographyRank";
+	d2rq:column "datatable.FilmProductionPhotographyRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_FilmProductionPhotographyGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :FilmProductionPhotographyGS;
+	d2rq:propertyDefinitionLabel "datatable FilmProductionPhotographyGS";
+	d2rq:column "datatable.FilmProductionPhotographyGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_FilmProductionPhotographySaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :FilmProductionPhotographySaT;
+	d2rq:propertyDefinitionLabel "datatable FilmProductionPhotographySaT";
+	d2rq:column "datatable.FilmProductionPhotographySaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_FilmProductionPhotographySaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :FilmProductionPhotographySaC;
+	d2rq:propertyDefinitionLabel "datatable FilmProductionPhotographySaC";
+	d2rq:column "datatable.FilmProductionPhotographySaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_FilmProductionPhotographyContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :FilmProductionPhotographyContinuation;
+	d2rq:propertyDefinitionLabel "datatable FilmProductionPhotographyContinuation";
+	d2rq:column "datatable.FilmProductionPhotographyContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ForensicScienceArchaeologyRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ForensicScienceArchaeologyRank;
+	d2rq:propertyDefinitionLabel "datatable ForensicScienceArchaeologyRank";
+	d2rq:column "datatable.ForensicScienceArchaeologyRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ForensicScienceArchaeologyGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ForensicScienceArchaeologyGS;
+	d2rq:propertyDefinitionLabel "datatable ForensicScienceArchaeologyGS";
+	d2rq:column "datatable.ForensicScienceArchaeologyGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ForensicScienceArchaeologySaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ForensicScienceArchaeologySaT;
+	d2rq:propertyDefinitionLabel "datatable ForensicScienceArchaeologySaT";
+	d2rq:column "datatable.ForensicScienceArchaeologySaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ForensicScienceArchaeologySaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ForensicScienceArchaeologySaC;
+	d2rq:propertyDefinitionLabel "datatable ForensicScienceArchaeologySaC";
+	d2rq:column "datatable.ForensicScienceArchaeologySaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ForensicScienceArchaeologyContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ForensicScienceArchaeologyContinuation;
+	d2rq:propertyDefinitionLabel "datatable ForensicScienceArchaeologyContinuation";
+	d2rq:column "datatable.ForensicScienceArchaeologyContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_GeographyEnvironmentalStudiesRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :GeographyEnvironmentalStudiesRank;
+	d2rq:propertyDefinitionLabel "datatable GeographyEnvironmentalStudiesRank";
+	d2rq:column "datatable.GeographyEnvironmentalStudiesRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_GeographyEnvironmentalStudiesGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :GeographyEnvironmentalStudiesGS;
+	d2rq:propertyDefinitionLabel "datatable GeographyEnvironmentalStudiesGS";
+	d2rq:column "datatable.GeographyEnvironmentalStudiesGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_GeographyEnvironmentalStudiesSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :GeographyEnvironmentalStudiesSaT;
+	d2rq:propertyDefinitionLabel "datatable GeographyEnvironmentalStudiesSaT";
+	d2rq:column "datatable.GeographyEnvironmentalStudiesSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_GeographyEnvironmentalStudiesSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :GeographyEnvironmentalStudiesSaC;
+	d2rq:propertyDefinitionLabel "datatable GeographyEnvironmentalStudiesSaC";
+	d2rq:column "datatable.GeographyEnvironmentalStudiesSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_GeographyEnvironmentalStudiesContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :GeographyEnvironmentalStudiesContinuation;
+	d2rq:propertyDefinitionLabel "datatable GeographyEnvironmentalStudiesContinuation";
+	d2rq:column "datatable.GeographyEnvironmentalStudiesContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HealthProfessionsRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HealthProfessionsRank;
+	d2rq:propertyDefinitionLabel "datatable HealthProfessionsRank";
+	d2rq:column "datatable.HealthProfessionsRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HealthProfessionsGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HealthProfessionsGS;
+	d2rq:propertyDefinitionLabel "datatable HealthProfessionsGS";
+	d2rq:column "datatable.HealthProfessionsGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HealthProfessionsSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HealthProfessionsSaT;
+	d2rq:propertyDefinitionLabel "datatable HealthProfessionsSaT";
+	d2rq:column "datatable.HealthProfessionsSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HealthProfessionsSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HealthProfessionsSaC;
+	d2rq:propertyDefinitionLabel "datatable HealthProfessionsSaC";
+	d2rq:column "datatable.HealthProfessionsSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HealthProfessionsContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HealthProfessionsContinuation;
+	d2rq:propertyDefinitionLabel "datatable HealthProfessionsContinuation";
+	d2rq:column "datatable.HealthProfessionsContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HistoryRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HistoryRank;
+	d2rq:propertyDefinitionLabel "datatable HistoryRank";
+	d2rq:column "datatable.HistoryRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HistoryGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HistoryGS;
+	d2rq:propertyDefinitionLabel "datatable HistoryGS";
+	d2rq:column "datatable.HistoryGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HistorySaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HistorySaT;
+	d2rq:propertyDefinitionLabel "datatable HistorySaT";
+	d2rq:column "datatable.HistorySaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HistorySaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HistorySaC;
+	d2rq:propertyDefinitionLabel "datatable HistorySaC";
+	d2rq:column "datatable.HistorySaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HistoryContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HistoryContinuation;
+	d2rq:propertyDefinitionLabel "datatable HistoryContinuation";
+	d2rq:column "datatable.HistoryContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HistoryofArtRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HistoryofArtRank;
+	d2rq:propertyDefinitionLabel "datatable HistoryofArtRank";
+	d2rq:column "datatable.HistoryofArtRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HistoryofArtGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HistoryofArtGS;
+	d2rq:propertyDefinitionLabel "datatable HistoryofArtGS";
+	d2rq:column "datatable.HistoryofArtGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HistoryofArtSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HistoryofArtSaT;
+	d2rq:propertyDefinitionLabel "datatable HistoryofArtSaT";
+	d2rq:column "datatable.HistoryofArtSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HistoryofArtSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HistoryofArtSaC;
+	d2rq:propertyDefinitionLabel "datatable HistoryofArtSaC";
+	d2rq:column "datatable.HistoryofArtSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HistoryofArtContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HistoryofArtContinuation;
+	d2rq:propertyDefinitionLabel "datatable HistoryofArtContinuation";
+	d2rq:column "datatable.HistoryofArtContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HospitalityEventManagementTourismRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HospitalityEventManagementTourismRank;
+	d2rq:propertyDefinitionLabel "datatable HospitalityEventManagementTourismRank";
+	d2rq:column "datatable.HospitalityEventManagementTourismRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HospitalityEventManagementTourismGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HospitalityEventManagementTourismGS;
+	d2rq:propertyDefinitionLabel "datatable HospitalityEventManagementTourismGS";
+	d2rq:column "datatable.HospitalityEventManagementTourismGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HospitalityEventManagementTourismSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HospitalityEventManagementTourismSaT;
+	d2rq:propertyDefinitionLabel "datatable HospitalityEventManagementTourismSaT";
+	d2rq:column "datatable.HospitalityEventManagementTourismSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HospitalityEventManagementTourismSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HospitalityEventManagementTourismSaC;
+	d2rq:propertyDefinitionLabel "datatable HospitalityEventManagementTourismSaC";
+	d2rq:column "datatable.HospitalityEventManagementTourismSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_HospitalityEventManagementTourismContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :HospitalityEventManagementTourismContinuation;
+	d2rq:propertyDefinitionLabel "datatable HospitalityEventManagementTourismContinuation";
+	d2rq:column "datatable.HospitalityEventManagementTourismContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_JournalismPublishingPublicRelationsRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :JournalismPublishingPublicRelationsRank;
+	d2rq:propertyDefinitionLabel "datatable JournalismPublishingPublicRelationsRank";
+	d2rq:column "datatable.JournalismPublishingPublicRelationsRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_JournalismPublishingPublicRelationsGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :JournalismPublishingPublicRelationsGS;
+	d2rq:propertyDefinitionLabel "datatable JournalismPublishingPublicRelationsGS";
+	d2rq:column "datatable.JournalismPublishingPublicRelationsGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_JournalismPublishingPublicRelationsSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :JournalismPublishingPublicRelationsSaT;
+	d2rq:propertyDefinitionLabel "datatable JournalismPublishingPublicRelationsSaT";
+	d2rq:column "datatable.JournalismPublishingPublicRelationsSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_JournalismPublishingPublicRelationsSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :JournalismPublishingPublicRelationsSaC;
+	d2rq:propertyDefinitionLabel "datatable JournalismPublishingPublicRelationsSaC";
+	d2rq:column "datatable.JournalismPublishingPublicRelationsSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_JournalismPublishingPublicRelationsContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :JournalismPublishingPublicRelationsContinuation;
+	d2rq:propertyDefinitionLabel "datatable JournalismPublishingPublicRelationsContinuation";
+	d2rq:column "datatable.JournalismPublishingPublicRelationsContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MathematicsRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MathematicsRank;
+	d2rq:propertyDefinitionLabel "datatable MathematicsRank";
+	d2rq:column "datatable.MathematicsRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MathematicsGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MathematicsGS;
+	d2rq:propertyDefinitionLabel "datatable MathematicsGS";
+	d2rq:column "datatable.MathematicsGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MathematicsSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MathematicsSaT;
+	d2rq:propertyDefinitionLabel "datatable MathematicsSaT";
+	d2rq:column "datatable.MathematicsSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MathematicsSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MathematicsSaC;
+	d2rq:propertyDefinitionLabel "datatable MathematicsSaC";
+	d2rq:column "datatable.MathematicsSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MathematicsContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MathematicsContinuation;
+	d2rq:propertyDefinitionLabel "datatable MathematicsContinuation";
+	d2rq:column "datatable.MathematicsContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MediaFilmStudiesRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MediaFilmStudiesRank;
+	d2rq:propertyDefinitionLabel "datatable MediaFilmStudiesRank";
+	d2rq:column "datatable.MediaFilmStudiesRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MediaFilmStudiesGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MediaFilmStudiesGS;
+	d2rq:propertyDefinitionLabel "datatable MediaFilmStudiesGS";
+	d2rq:column "datatable.MediaFilmStudiesGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MediaFilmStudiesSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MediaFilmStudiesSaT;
+	d2rq:propertyDefinitionLabel "datatable MediaFilmStudiesSaT";
+	d2rq:column "datatable.MediaFilmStudiesSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MediaFilmStudiesSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MediaFilmStudiesSaC;
+	d2rq:propertyDefinitionLabel "datatable MediaFilmStudiesSaC";
+	d2rq:column "datatable.MediaFilmStudiesSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MediaFilmStudiesContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MediaFilmStudiesContinuation;
+	d2rq:propertyDefinitionLabel "datatable MediaFilmStudiesContinuation";
+	d2rq:column "datatable.MediaFilmStudiesContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MedicineRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MedicineRank;
+	d2rq:propertyDefinitionLabel "datatable MedicineRank";
+	d2rq:column "datatable.MedicineRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MedicineGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MedicineGS;
+	d2rq:propertyDefinitionLabel "datatable MedicineGS";
+	d2rq:column "datatable.MedicineGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MedicineSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MedicineSaT;
+	d2rq:propertyDefinitionLabel "datatable MedicineSaT";
+	d2rq:column "datatable.MedicineSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MedicineSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MedicineSaC;
+	d2rq:propertyDefinitionLabel "datatable MedicineSaC";
+	d2rq:column "datatable.MedicineSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MedicineContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MedicineContinuation;
+	d2rq:propertyDefinitionLabel "datatable MedicineContinuation";
+	d2rq:column "datatable.MedicineContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ModernLanguagesLinguisticsRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ModernLanguagesLinguisticsRank;
+	d2rq:propertyDefinitionLabel "datatable ModernLanguagesLinguisticsRank";
+	d2rq:column "datatable.ModernLanguagesLinguisticsRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ModernLanguagesLinguisticsGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ModernLanguagesLinguisticsGS;
+	d2rq:propertyDefinitionLabel "datatable ModernLanguagesLinguisticsGS";
+	d2rq:column "datatable.ModernLanguagesLinguisticsGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ModernLanguagesLinguisticsSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ModernLanguagesLinguisticsSaT;
+	d2rq:propertyDefinitionLabel "datatable ModernLanguagesLinguisticsSaT";
+	d2rq:column "datatable.ModernLanguagesLinguisticsSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ModernLanguagesLinguisticsSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ModernLanguagesLinguisticsSaC;
+	d2rq:propertyDefinitionLabel "datatable ModernLanguagesLinguisticsSaC";
+	d2rq:column "datatable.ModernLanguagesLinguisticsSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ModernLanguagesLinguisticsContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ModernLanguagesLinguisticsContinuation;
+	d2rq:propertyDefinitionLabel "datatable ModernLanguagesLinguisticsContinuation";
+	d2rq:column "datatable.ModernLanguagesLinguisticsContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MusicRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MusicRank;
+	d2rq:propertyDefinitionLabel "datatable MusicRank";
+	d2rq:column "datatable.MusicRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MusicGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MusicGS;
+	d2rq:propertyDefinitionLabel "datatable MusicGS";
+	d2rq:column "datatable.MusicGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MusicSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MusicSaT;
+	d2rq:propertyDefinitionLabel "datatable MusicSaT";
+	d2rq:column "datatable.MusicSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MusicSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MusicSaC;
+	d2rq:propertyDefinitionLabel "datatable MusicSaC";
+	d2rq:column "datatable.MusicSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_MusicContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :MusicContinuation;
+	d2rq:propertyDefinitionLabel "datatable MusicContinuation";
+	d2rq:column "datatable.MusicContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_NursingMidwiferyRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :NursingMidwiferyRank;
+	d2rq:propertyDefinitionLabel "datatable NursingMidwiferyRank";
+	d2rq:column "datatable.NursingMidwiferyRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_NursingMidwiferyGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :NursingMidwiferyGS;
+	d2rq:propertyDefinitionLabel "datatable NursingMidwiferyGS";
+	d2rq:column "datatable.NursingMidwiferyGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_NursingMidwiferySaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :NursingMidwiferySaT;
+	d2rq:propertyDefinitionLabel "datatable NursingMidwiferySaT";
+	d2rq:column "datatable.NursingMidwiferySaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_NursingMidwiferySaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :NursingMidwiferySaC;
+	d2rq:propertyDefinitionLabel "datatable NursingMidwiferySaC";
+	d2rq:column "datatable.NursingMidwiferySaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_NursingMidwiferyContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :NursingMidwiferyContinuation;
+	d2rq:propertyDefinitionLabel "datatable NursingMidwiferyContinuation";
+	d2rq:column "datatable.NursingMidwiferyContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PharmacyPharmacologyRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PharmacyPharmacologyRank;
+	d2rq:propertyDefinitionLabel "datatable PharmacyPharmacologyRank";
+	d2rq:column "datatable.PharmacyPharmacologyRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PharmacyPharmacologyGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PharmacyPharmacologyGS;
+	d2rq:propertyDefinitionLabel "datatable PharmacyPharmacologyGS";
+	d2rq:column "datatable.PharmacyPharmacologyGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PharmacyPharmacologySaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PharmacyPharmacologySaT;
+	d2rq:propertyDefinitionLabel "datatable PharmacyPharmacologySaT";
+	d2rq:column "datatable.PharmacyPharmacologySaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PharmacyPharmacologySaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PharmacyPharmacologySaC;
+	d2rq:propertyDefinitionLabel "datatable PharmacyPharmacologySaC";
+	d2rq:column "datatable.PharmacyPharmacologySaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PharmacyPharmacologyContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PharmacyPharmacologyContinuation;
+	d2rq:propertyDefinitionLabel "datatable PharmacyPharmacologyContinuation";
+	d2rq:column "datatable.PharmacyPharmacologyContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PhilosophyRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PhilosophyRank;
+	d2rq:propertyDefinitionLabel "datatable PhilosophyRank";
+	d2rq:column "datatable.PhilosophyRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PhilosophyGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PhilosophyGS;
+	d2rq:propertyDefinitionLabel "datatable PhilosophyGS";
+	d2rq:column "datatable.PhilosophyGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PhilosophySaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PhilosophySaT;
+	d2rq:propertyDefinitionLabel "datatable PhilosophySaT";
+	d2rq:column "datatable.PhilosophySaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PhilosophySaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PhilosophySaC;
+	d2rq:propertyDefinitionLabel "datatable PhilosophySaC";
+	d2rq:column "datatable.PhilosophySaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PhilosophyContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PhilosophyContinuation;
+	d2rq:propertyDefinitionLabel "datatable PhilosophyContinuation";
+	d2rq:column "datatable.PhilosophyContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PhysicsRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PhysicsRank;
+	d2rq:propertyDefinitionLabel "datatable PhysicsRank";
+	d2rq:column "datatable.PhysicsRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PhysicsGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PhysicsGS;
+	d2rq:propertyDefinitionLabel "datatable PhysicsGS";
+	d2rq:column "datatable.PhysicsGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PhysicsSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PhysicsSaT;
+	d2rq:propertyDefinitionLabel "datatable PhysicsSaT";
+	d2rq:column "datatable.PhysicsSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PhysicsSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PhysicsSaC;
+	d2rq:propertyDefinitionLabel "datatable PhysicsSaC";
+	d2rq:column "datatable.PhysicsSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PhysicsContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PhysicsContinuation;
+	d2rq:propertyDefinitionLabel "datatable PhysicsContinuation";
+	d2rq:column "datatable.PhysicsContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PoliticsRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PoliticsRank;
+	d2rq:propertyDefinitionLabel "datatable PoliticsRank";
+	d2rq:column "datatable.PoliticsRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PoliticsGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PoliticsGS;
+	d2rq:propertyDefinitionLabel "datatable PoliticsGS";
+	d2rq:column "datatable.PoliticsGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PoliticsSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PoliticsSaT;
+	d2rq:propertyDefinitionLabel "datatable PoliticsSaT";
+	d2rq:column "datatable.PoliticsSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PoliticsSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PoliticsSaC;
+	d2rq:propertyDefinitionLabel "datatable PoliticsSaC";
+	d2rq:column "datatable.PoliticsSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PoliticsContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PoliticsContinuation;
+	d2rq:propertyDefinitionLabel "datatable PoliticsContinuation";
+	d2rq:column "datatable.PoliticsContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PsychologyRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PsychologyRank;
+	d2rq:propertyDefinitionLabel "datatable PsychologyRank";
+	d2rq:column "datatable.PsychologyRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PsychologyGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PsychologyGS;
+	d2rq:propertyDefinitionLabel "datatable PsychologyGS";
+	d2rq:column "datatable.PsychologyGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PsychologySaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PsychologySaT;
+	d2rq:propertyDefinitionLabel "datatable PsychologySaT";
+	d2rq:column "datatable.PsychologySaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PsychologySaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PsychologySaC;
+	d2rq:propertyDefinitionLabel "datatable PsychologySaC";
+	d2rq:column "datatable.PsychologySaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_PsychologyContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :PsychologyContinuation;
+	d2rq:propertyDefinitionLabel "datatable PsychologyContinuation";
+	d2rq:column "datatable.PsychologyContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ReligiousstudiesandtheologyRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ReligiousstudiesandtheologyRank;
+	d2rq:propertyDefinitionLabel "datatable ReligiousstudiesandtheologyRank";
+	d2rq:column "datatable.ReligiousstudiesandtheologyRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ReligiousstudiesandtheologyGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ReligiousstudiesandtheologyGS;
+	d2rq:propertyDefinitionLabel "datatable ReligiousstudiesandtheologyGS";
+	d2rq:column "datatable.ReligiousstudiesandtheologyGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ReligiousstudiesandtheologySaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ReligiousstudiesandtheologySaT;
+	d2rq:propertyDefinitionLabel "datatable ReligiousstudiesandtheologySaT";
+	d2rq:column "datatable.ReligiousstudiesandtheologySaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ReligiousstudiesandtheologySaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ReligiousstudiesandtheologySaC;
+	d2rq:propertyDefinitionLabel "datatable ReligiousstudiesandtheologySaC";
+	d2rq:column "datatable.ReligiousstudiesandtheologySaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_ReligiousstudiesandtheologyContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :ReligiousstudiesandtheologyContinuation;
+	d2rq:propertyDefinitionLabel "datatable ReligiousstudiesandtheologyContinuation";
+	d2rq:column "datatable.ReligiousstudiesandtheologyContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SocialPolicyAdministrationRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SocialPolicyAdministrationRank;
+	d2rq:propertyDefinitionLabel "datatable SocialPolicyAdministrationRank";
+	d2rq:column "datatable.SocialPolicyAdministrationRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SocialPolicyAdministrationGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SocialPolicyAdministrationGS;
+	d2rq:propertyDefinitionLabel "datatable SocialPolicyAdministrationGS";
+	d2rq:column "datatable.SocialPolicyAdministrationGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SocialPolicyAdministrationSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SocialPolicyAdministrationSaT;
+	d2rq:propertyDefinitionLabel "datatable SocialPolicyAdministrationSaT";
+	d2rq:column "datatable.SocialPolicyAdministrationSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SocialPolicyAdministrationSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SocialPolicyAdministrationSaC;
+	d2rq:propertyDefinitionLabel "datatable SocialPolicyAdministrationSaC";
+	d2rq:column "datatable.SocialPolicyAdministrationSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SocialPolicyAdministrationContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SocialPolicyAdministrationContinuation;
+	d2rq:propertyDefinitionLabel "datatable SocialPolicyAdministrationContinuation";
+	d2rq:column "datatable.SocialPolicyAdministrationContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SocialWorkRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SocialWorkRank;
+	d2rq:propertyDefinitionLabel "datatable SocialWorkRank";
+	d2rq:column "datatable.SocialWorkRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SocialWorkGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SocialWorkGS;
+	d2rq:propertyDefinitionLabel "datatable SocialWorkGS";
+	d2rq:column "datatable.SocialWorkGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SocialWorkSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SocialWorkSaT;
+	d2rq:propertyDefinitionLabel "datatable SocialWorkSaT";
+	d2rq:column "datatable.SocialWorkSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SocialWorkSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SocialWorkSaC;
+	d2rq:propertyDefinitionLabel "datatable SocialWorkSaC";
+	d2rq:column "datatable.SocialWorkSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SocialWorkContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SocialWorkContinuation;
+	d2rq:propertyDefinitionLabel "datatable SocialWorkContinuation";
+	d2rq:column "datatable.SocialWorkContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SociologyRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SociologyRank;
+	d2rq:propertyDefinitionLabel "datatable SociologyRank";
+	d2rq:column "datatable.SociologyRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SociologyGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SociologyGS;
+	d2rq:propertyDefinitionLabel "datatable SociologyGS";
+	d2rq:column "datatable.SociologyGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SociologySaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SociologySaT;
+	d2rq:propertyDefinitionLabel "datatable SociologySaT";
+	d2rq:column "datatable.SociologySaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SociologySaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SociologySaC;
+	d2rq:propertyDefinitionLabel "datatable SociologySaC";
+	d2rq:column "datatable.SociologySaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SociologyContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SociologyContinuation;
+	d2rq:propertyDefinitionLabel "datatable SociologyContinuation";
+	d2rq:column "datatable.SociologyContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SportsscienceRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SportsscienceRank;
+	d2rq:propertyDefinitionLabel "datatable SportsscienceRank";
+	d2rq:column "datatable.SportsscienceRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SportsscienceGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SportsscienceGS;
+	d2rq:propertyDefinitionLabel "datatable SportsscienceGS";
+	d2rq:column "datatable.SportsscienceGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SportsscienceSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SportsscienceSaT;
+	d2rq:propertyDefinitionLabel "datatable SportsscienceSaT";
+	d2rq:column "datatable.SportsscienceSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SportsscienceSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SportsscienceSaC;
+	d2rq:propertyDefinitionLabel "datatable SportsscienceSaC";
+	d2rq:column "datatable.SportsscienceSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_SportsscienceContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :SportsscienceContinuation;
+	d2rq:propertyDefinitionLabel "datatable SportsscienceContinuation";
+	d2rq:column "datatable.SportsscienceContinuation";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_VeterinaryScienceRank a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :VeterinaryScienceRank;
+	d2rq:propertyDefinitionLabel "datatable VeterinaryScienceRank";
+	d2rq:column "datatable.VeterinaryScienceRank";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_VeterinaryScienceGS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :VeterinaryScienceGS;
+	d2rq:propertyDefinitionLabel "datatable VeterinaryScienceGS";
+	d2rq:column "datatable.VeterinaryScienceGS";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_VeterinaryScienceSaT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :VeterinaryScienceSaT;
+	d2rq:propertyDefinitionLabel "datatable VeterinaryScienceSaT";
+	d2rq:column "datatable.VeterinaryScienceSaT";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_VeterinaryScienceSaC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :VeterinaryScienceSaC;
+	d2rq:propertyDefinitionLabel "datatable VeterinaryScienceSaC";
+	d2rq:column "datatable.VeterinaryScienceSaC";
+	d2rq:datatype xsd:double;
+	.
+map:datatable_VeterinaryScienceContinuation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:datatable;
+	d2rq:property :VeterinaryScienceContinuation;
+	d2rq:propertyDefinitionLabel "datatable VeterinaryScienceContinuation";
+	d2rq:column "datatable.VeterinaryScienceContinuation";
+	d2rq:datatype xsd:double;
+	.
+

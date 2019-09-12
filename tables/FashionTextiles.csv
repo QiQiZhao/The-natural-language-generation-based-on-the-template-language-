@@ -1,0 +1,50 @@
+Rank,Name of Institution,Guardian score/100,% Satisfied with Teaching,% Satisfied with course,Continuation ,Expenditure per student (FTE),Student:staff ratio,Career prospects,Value added score/10,Average Entry Tariff,% Satisfied with Assessment
+1,Edinburgh,100.0,90,92,,10,15.6,59,10,176,78
+2,Staffordshire,95.2,92,89,,8,17.1,68,9,121,84
+3,Loughborough,94.7,89,85,95,7,14.3,66,8,204,69
+4,Nottingham Trent,90.7,86,88,94,5,11.5,74,4,164,79
+4,Salford,90.7,91,89,,4,16.8,,,148,90
+6,Kingston,90.5,90,86,94,9,16.6,51,7,184,78
+7,Arts University Bournemouth,88.3,87,83,94,5,15.2,81,4,163,76
+8,Trinity Saint David,83.3,90,87,,2,12.8,,7,139,85
+9,Coventry,82.7,85,81,,6,17.0,,10,155,79
+10,Robert Gordon,81.3,85,76,,3,19.0,,10,169,83
+11,De Montfort,80.3,87,87,91,6,15.7,67,6,130,79
+12,Dundee,79.9,83,85,,8,14.6,,8,,76
+13,Westminster,78.1,81,84,94,6,14.8,80,7,142,75
+14,Wolverhampton,78.0,87,84,,8,15.7,,,111,81
+15,Sheffield Hallam,76.6,94,92,86,6,17.2,,4,133,89
+16,Falmouth,76.4,92,89,95,3,20.1,73,6,126,81
+17,Brighton,76.2,88,85,92,4,17.3,60,8,142,78
+18,Derby,74.2,84,80,88,6,13.4,64,7,136,74
+19,Leeds Arts,73.9,91,96,88,3,13.0,,4,152,81
+20,Manchester,73.3,86,86,95,5,15.4,,5,163,71
+21,Plymouth College of Art,73.2,91,87,90,2,12.6,,3,137,81
+22,University for the Creative Arts,73.0,83,82,85,9,12.1,56,6,148,79
+23,Cardiff Met,72.2,88,88,,8,14.4,,3,124,81
+24,Leeds,72.1,80,78,92,7,17.0,71,9,165,76
+25,Norwich University of the Arts,71.9,86,83,94,2,17.1,56,5,144,83
+26,Manchester Met,71.8,86,86,87,3,13.9,61,4,172,75
+27,University of the Arts London,71.5,77,75,92,10,14.3,56,7,147,74
+28,Portsmouth,70.2,89,84,,8,17.8,,7,119,77
+29,Liverpool John Moores,70.1,84,78,87,4,13.0,55,7,146,77
+30,Ulster,67.4,80,68,98,2,18.4,65,8,142,72
+31,Bucks New University,65.1,82,73,,9,,,5,137,71
+32,Gloucestershire,64.6,87,85,,5,19.9,,,134,78
+33,Sunderland,63.6,80,76,,6,11.5,,7,,68
+34,Central Lancashire,63.5,83,82,89,4,13.8,57,7,129,78
+35,Solent,63.3,83,80,91,3,14.0,56,7,114,70
+36,Middlesex,62.2,90,88,84,7,15.4,49,3,118,86
+37,Anglia Ruskin,60.0,90,87,,6,18.9,,3,106,83
+38,Huddersfield,58.2,86,83,89,4,20.1,60,6,131,78
+39,Heriot-Watt,57.0,84,85,90,7,23.6,73,3,160,70
+40,Leeds Beckett,54.7,85,82,88,4,17.6,,,110,78
+41,London Met,53.5,83,78,,2,19.7,,6,136,74
+42,Southampton,52.0,84,74,94,6,18.0,55,2,172,72
+43,Bath Spa,49.2,82,79,96,5,17.3,55,2,130,71
+44,Hertfordshire,47.1,89,82,,7,21.2,,2,115,80
+45,Glasgow School of Art,45.2,77,73,,6,16.2,52,4,172,64
+46,East London,39.9,77,74,,4,16.2,,1,124,72
+47,Birmingham City,36.5,82,78,87,6,20.6,54,2,144,71
+48,Ravensbourne,35.3,87,85,85,2,31.7,65,3,108,81
+49,South Wales,34.5,76,66,91,2,17.5,44,3,137,71

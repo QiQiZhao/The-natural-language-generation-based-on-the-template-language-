@@ -1,0 +1,37 @@
+Rank,Name of Institution,Guardian score/100,% Satisfied with Teaching,% Satisfied with course,Continuation ,Expenditure per student (FTE),Student:staff ratio,Career prospects,Value added score/10,Average Entry Tariff,% Satisfied with Assessment
+1,Cambridge,100.0,96,96,97,10,10.1,94,8,203,76
+2,St Andrews,98.9,99,99,,4,9.6,,,189,97
+3,Durham,84.7,93,87,99,5,12.2,87,8,179,79
+4,Exeter,80.2,95,96,97,3,12.3,84,7,174,85
+5,Lancaster,77.5,97,93,,7,7.7,,,152,80
+6,Heythrop College,75.9,89,84,,,6.1,75,9,,85
+7,Edinburgh,72.6,100,100,92,9,13.7,79,8,162,78
+8,Birmingham,72.5,96,96,93,5,12.0,,7,148,82
+9,Oxford,71.0,88,88,99,10,16.0,90,7,205,49
+10,Glasgow,69.4,99,98,,4,13.9,,6,,80
+10,Newman,69.4,95,93,,5,7.0,67,7,101,86
+12,Leeds,68.9,91,90,91,7,10.5,,6,152,83
+13,Wolverhampton,67.4,90,91,,10,8.6,,,94,87
+14,Nottingham,66.0,99,97,95,5,15.7,,8,148,83
+15,Bristol,65.9,96,88,,4,12.6,,6,167,73
+16,Chichester,65.0,96,92,,2,11.5,,,108,82
+17,Queen's Belfast,62.5,90,95,96,7,,84,4,147,70
+18,Gloucestershire,57.5,90,78,,5,11.1,,,122,78
+19,Manchester,55.7,91,88,94,7,13.4,68,6,143,73
+20,SOAS,55.2,90,87,,6,10.3,,4,138,74
+21,Bath Spa,54.1,92,91,90,5,22.2,,8,114,88
+22,"St Mary's, Twickenham",53.2,90,87,,4,11.8,,9,116,62
+23,Kent,51.1,89,87,,4,17.7,70,7,117,80
+24,Liverpool Hope,50.3,91,93,86,3,9.4,,2,106,82
+25,South Wales,48.9,83,87,,4,17.8,,8,106,82
+26,Leeds Trinity,47.9,94,89,,3,16.7,,5,98,83
+27,Chester,47.1,91,92,89,4,11.8,56,3,112,89
+28,Cardiff,44.1,89,83,96,3,15.7,60,5,141,75
+29,Sheffield,41.9,91,84,,4,19.2,,4,144,72
+30,King's College London,39.8,91,86,93,7,14.8,56,3,153,71
+31,Trinity Saint David,39.7,88,87,,5,12.6,,1,118,74
+32,Aberdeen,39.3,84,75,,4,12.7,,,158,63
+33,Canterbury Christ Church,37.8,98,95,78,4,18.6,,3,96,83
+34,Roehampton,33.7,87,79,,4,19.8,71,3,99,71
+35,Winchester,33.1,76,66,,3,13.3,,,105,69
+36,York St John,29.5,91,78,90,3,15.2,54,1,108,79

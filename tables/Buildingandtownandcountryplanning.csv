@@ -1,0 +1,45 @@
+Rank,Name of Institution,Guardian score/100,% Satisfied with Teaching,% Satisfied with course,Continuation ,Expenditure per student (FTE),Student:staff ratio,Career prospects,Value added score/10,Average Entry Tariff,% Satisfied with Assessment
+1,Cambridge,100.0,81,83,,10,12.5,,8,204,62
+2,Nottingham Trent,95.7,92,95,92,5,15.9,99,8,130,88
+3,UCL,95.3,79,83,,10,10.8,,8,168,64
+4,Sheffield,93.0,92,90,97,5,16.7,98,7,141,78
+5,Queen's Belfast,90.9,97,97,,6,19.8,,8,130,92
+6,Loughborough,88.2,76,76,95,8,8.6,94,3,151,71
+7,Coventry,86.4,89,87,95,7,10.9,,9,109,73
+8,Nottingham,86.2,87,96,,8,13.3,,3,138,78
+9,Heriot-Watt,81.4,79,80,90,10,15.8,94,4,169,70
+10,Edinburgh,80.5,84,73,,4,20.1,,8,155,62
+11,Reading,79.3,84,85,95,8,16.9,93,4,137,77
+12,Anglia Ruskin,78.8,95,97,,7,15.2,,8,106,79
+13,Manchester,77.9,73,73,98,8,13.1,,5,155,60
+14,UWE Bristol,77.0,89,89,89,4,17.5,89,7,122,73
+15,Aston,76.6,93,81,,5,15.3,,7,126,74
+16,Portsmouth,76.3,67,69,93,6,16.1,99,9,112,69
+17,Northumbria,75.4,81,84,92,3,17.0,92,7,136,66
+18,Liverpool John Moores,75.2,84,90,92,3,17.3,82,7,135,77
+19,Birmingham City,75.0,88,80,87,5,17.0,82,9,124,68
+20,South Wales,74.8,89,82,,3,19.5,,7,132,81
+21,Liverpool,72.6,86,93,,6,16.6,,7,130,71
+22,Birmingham,71.1,93,92,,7,15.7,,3,138,67
+23,Westminster,71.0,89,87,88,4,15.4,,5,125,79
+24,Central Lancashire,70.4,85,79,,5,14.2,72,,129,67
+25,Oxford Brookes,70.3,80,81,95,5,15.0,80,6,122,69
+26,Glasgow Caledonian,69.2,84,88,89,4,16.8,81,3,150,76
+27,Ulster,68.8,87,82,88,2,20.4,85,7,132,70
+28,Cardiff,68.6,88,90,,7,17.9,,3,142,75
+29,Salford,67.2,82,79,80,3,16.1,88,4,127,71
+30,Sheffield Hallam,66.0,84,89,90,4,16.2,83,2,121,68
+31,Leeds Beckett,65.6,81,78,86,4,15.7,83,8,107,68
+32,Robert Gordon,64.6,71,73,,3,21.9,92,7,141,66
+33,Royal Agricultural University,64.3,85,88,98,4,24.3,81,5,127,72
+34,Bolton,63.7,77,90,,2,13.2,,1,,68
+35,Newcastle,63.2,75,74,94,6,14.1,82,3,133,60
+36,London South Bank,62.4,81,90,80,4,19.9,80,9,,72
+37,West London,62.3,76,80,,4,17.3,,5,106,56
+38,Kingston,61.1,69,80,85,7,16.2,82,7,122,59
+39,Brighton,60.7,86,79,83,3,16.6,90,4,99,67
+40,Greenwich,60.2,75,69,91,5,15.2,77,2,122,68
+41,Edinburgh Napier,57.7,90,91,86,5,24.0,80,5,132,76
+42,Wolverhampton,56.5,88,91,81,5,19.8,84,2,101,78
+43,Plymouth,53.2,81,68,,4,20.0,83,3,122,59
+44,Trinity Saint David,36.5,60,44,,2,12.9,,1,,36
